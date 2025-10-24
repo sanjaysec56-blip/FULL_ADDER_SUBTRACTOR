@@ -4,6 +4,7 @@ Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
 **AIM:**
 
+
 To design a Full Adder and Full Subtractor circuit and verify its truth table in Quartus using Verilog programming.
 
 **Equipments Required:**
@@ -42,14 +43,36 @@ Borrow out = A'Bin + A'B + BBin
 
 Write the detailed procedure here
 
-**Program:**
+**Program:**EXPERIMENT 3:
+i)FULL ADDER
+
+module fa(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=( (a ^ b)^cin);
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+endmodule
+
+ii)FULL SUBTRACTOR
+
+module fs(a,b,bin,difference,borrow);
+input a,b,bin;
+output difference,borrow;
+assign difference= ( (a ^ b)^bin);
+assign borrow= ( ( ~a & b)| ( bin & (~(a ^ b ))));
+endmodule
 
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
 
-**RTL Schematic**
+**RTL Schematic**![WhatsApp Image 2025-10-12 at 11 34 09](https://github.com/user-attachments/assets/d995116a-a947-4190-ba11-620b0080b679)
+![WhatsApp Image 2025-10-12 at 11 34 09 (1)](https://github.com/user-attachments/assets/2c16f297-2df1-4274-bee8-bfd6491c0253)
 
-**Output Timing Waveform**
+
+
+**Output Timing Waveform**<img width="1080" height="255" alt="image" src="https://github.com/user-attachments/assets/16be516a-c8a4-4214-888a-78258bd9c0bb" />
+
+
 
 **Result:**
 
